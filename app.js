@@ -2,7 +2,18 @@
  * Module dependencies.
  */
 
+<<<<<<< HEAD
 var express = require('express'), http = require('http'), path = require('path'), io = require('socket.io');
+=======
+/*
+	test
+*/
+
+var express = require('express')
+, http = require('http')
+, path = require('path')
+, io = require('socket.io');
+>>>>>>> e2118c49404b977ddfefdb1503680c8d5503bb79
 
 var app = express(), server = require('http').createServer(app), io = io.listen(server);
 
