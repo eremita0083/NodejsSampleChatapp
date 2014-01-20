@@ -2,18 +2,7 @@
  * Module dependencies.
  */
 
-<<<<<<< HEAD
 var express = require('express'), http = require('http'), path = require('path'), io = require('socket.io');
-=======
-/*
-	test
-*/
-
-var express = require('express')
-, http = require('http')
-, path = require('path')
-, io = require('socket.io');
->>>>>>> e2118c49404b977ddfefdb1503680c8d5503bb79
 
 var app = express(), server = require('http').createServer(app), io = io.listen(server);
 
@@ -26,7 +15,8 @@ app.configure(function() {
 	app.use(express.logger('dev'));
 	// app.use(express.bodyParser()); connect3.0で使えなくなるよという警告が出るので、下の二行を追加し、この行をremoveする。
 	app.use(express.json());
-	app.use(express.urlencoded()); //express.bodyParserはこの2行に置き換えることができ、その場合multipart()はコネクト３で外されるよという警告はでなくなる
+	app.use(express.urlencoded());
+	//express.bodyParserはこの2行に置き換えることができ、その場合multipart()はコネクト３で外されるよという警告はでなくなる
 	app.use(express.methodOverride());
 	app.use(app.router);
 	app.use(express.static(path.join(__dirname, 'public')));
@@ -46,3 +36,4 @@ io.sockets.on('connection', function(socket) {
 	});
 });
 
+console.log('server 3000');
